@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:baselineAligned="false"
+    android:orientation="vertical">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/particleSettingConstraintlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:drawable/dialog_holo_dark_frame"
+        android:theme="@android:style/Theme.Holo.Dialog"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
+
+        <SeekBar
+            android:id="@+id/particleSeekBar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:max="1999"
+            android:progress="500"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+        <SeekBar
+            android:id="@+id/fillAlphaSeekBar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:max="254"
+            android:progress="64"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="32dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="8dp"
+            android:text="effect"
+            android:textAppearance="@android:style/TextAppearance.Holo.Small"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fillAlphaSeekBar" />
+
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="19dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="8dp"
+            android:text="view "
+            android:textAppearance="@android:style/TextAppearance.Holo.Small"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/effectRadioGroup" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:text="particles "
+            android:textAppearance="@android:style/TextAppearance.Holo.Small"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="24dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="8dp"
+            android:text="alpha "
+            android:textAppearance="@android:style/TextAppearance.Holo.Small"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/particleSeekBar" />
+
+        <TextView
+            android:id="@+id/particleSeekTextView"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="24dp"
+            android:text="64"
+            android:textAlignment="textEnd"
+            android:textAppearance="@android:style/TextAppearance.Holo.Small"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/fillAlphaTextView"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="8dp"
+            android:text="64"
+            android:textAlignment="textEnd"
+            android:textAppearance="@android:style/TextAppearance.Holo.Small"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/particleSeekBar" />
+
+        <RadioGroup
+            android:id="@+id/effectRadioGroup"
+            android:layout_width="328dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView7">
+
+            <RadioButton
+                android:id="@+id/effectMeetradioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.03"
+                android:text="meet"
+                android:textAppearance="@android:style/TextAppearance.Holo.Small"
+                tools:layout_editor_absoluteX="-24dp"
+                tools:layout_editor_absoluteY="89dp" />
+
+            <RadioButton
+                android:id="@+id/effectLeaveRadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.03"
+                android:text="leave"
+                android:textAppearance="@android:style/TextAppearance.Holo.Small"
+                tools:layout_editor_absoluteX="-24dp"
+                tools:layout_editor_absoluteY="89dp" />
+
+        </RadioGroup>
+
+        <RadioGroup
+            android:id="@+id/viewRadioGroup"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView5">
+
+            <RadioButton
+                android:id="@+id/surfaceRadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.03"
+                android:text="Surface"
+                android:textAlignment="viewStart"
+                android:textAppearance="@android:style/TextAppearance.Holo.Small" />
+
+            <RadioButton
+                android:id="@+id/glRadioButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.03"
+                android:text="GL"
+                android:textAlignment="viewStart"
+                android:textAppearance="@android:style/TextAppearance.Holo.Small" />
+
+        </RadioGroup>
+
+
+    </android.support.constraint.ConstraintLayout>
+</LinearLayout>
